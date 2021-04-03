@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Home</title>
+  </head>
+  <body>
+    {%if user.is_authenticated%}
+    HI {{user.username}}
+    <a href="{%url 'logout'%}">Log out</a>
+    {%else%}
+    <p>You are not logged in.</p><br>
+    <a href="{%url 'login'%}">Login</a><br>
+    <a href="{%url 'signup'%}">Sign up</a>
+    {%endif%}
+    <br>
+      <a href="{%url 'counter:cnt'%}">Go To Counter</a><br>
+    <a href="{%url 'quiz:qt'%}">Go to Quiz</a>
+
+  </body>
+</html>

@@ -1,0 +1,14 @@
+{%extends 'home.html'%}
+
+{%block headblock%}
+<title>Counter</title>
+{%endblock%}
+
+{%block bodyblock%}
+quiz selector here
+<form method="post">
+  {%csrf%}
+  {{form.as_p}}
+</form>
+
+{%endblock%}
